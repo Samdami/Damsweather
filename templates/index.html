@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damsweather</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dams Weather</h1>
+        <!-- <nav>
+            <a href="{{url_for('weather')}}">View Weather</a>
+
+        </nav> -->
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Stay Updated with the Weather</h2>
+                <p>Check the latest weather conditions and forecasts for your location.</p>
+                <form action="/weather" method="post">
+                    <label for="city">Enter a city name:</label>
+                    <input type="text" id="city" name="city" required>
+                    <input type="submit" class="cta-button" value="Get Weather">
+                </form>
+                <!-- <a href="weather.html" class="cta-button">Get Started</a> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Weather App. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+>>> seconds_series = pd.Series(pd.date_range("2000-01-01", periods=3, freq="s"))
+>>> seconds_series
+0   2000-01-01 00:00:00
+1   2000-01-01 00:00:01
+2   2000-01-01 00:00:02
+dtype: datetime64[ns]
+>>> seconds_series.dt.second
+0    0
+1    1
+2    2
+dtype: int32
+
+
+from datetime import datetime
+
+# Assuming 'data' contains the weather API response as a dictionary
+timestamp = data['dt']
+# Convert the Unix timestamp to a datetime object
+date_time = datetime.fromtimestamp(timestamp)
+# Format the datetime object as a string in a desired format
+formatted_date_time = date_time.strftime('%Y-%m-%d %H:%M:%S')
+
+print(formatted_date_time)  # Output: '2023-07-27 12:34:56'

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Weather Information</h1>
+        <nav>
+            <a href="{{url_for('index')}}">Back to Home</a>        </nav>
+    </header>
+    <main>
+            <div class="weather-details">
+                <h2>Today's Weather in {{ city }} at {{ time }}</h2>
+                <img src="{{ weather_data['icon_url'] }}" alt="Weather Icon">
+                <p>The current weather in {{ city }} is {{ weather }}.</p>
+                <p>The temperature is {{ temp }}°C, but it feels like {{ feels_like }}°C.</p>
+                <p>The humidity is {{ humidity }}%.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Weather App. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
