@@ -25,6 +25,7 @@ def weather():
         feels_like = data["main"]["feels_like"]
         time = data['dt']
         humidity = data["main"]["humidity"]
+        # dew_point = data['main']['dew_point']
         icon_id = data['weather'][0]['icon']
         icon_url = f"http://openweathermap.org/img/w/{icon_id}.png"
         weather_data = {'icon_url': icon_url}
@@ -36,5 +37,9 @@ def weather():
         error = data["message"]
         return render_template("error.html", error=error)
 
+# def calculate_dew_point(temperature, humidity):
+#     # Implement dew point calculation based on the temperature and relative humidity
+#     # You can use various formulas available online for dew point calculation
+#     return 0
 if __name__ == "__main__":
     app.run(debug=True)
